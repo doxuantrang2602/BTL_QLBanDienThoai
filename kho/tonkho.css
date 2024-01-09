@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 12px;
+
+}
+
+table, td, th {
+    padding: 20px 60px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin-left: 2px;
+    margin-top: 20px;
+}
+tr {
+    height: 80px;
+}
+
+th {
+    font-size: 18px;
+    background: seashell;
+    text-align: center;
+}
+
+td {
+    font-size: 17px;
+    text-align: center;
+}
+
+.table{
+    margin-top: 30px;
+}
+
+.row span {
+    font-weight: bold;
+    font-size: 28px;
+    color: lawngreen;
+}
+
+.row p {
+    font-size: 20px;
+    text-align: center;
+}
+
+#navvi > .form-group > .col-md-3 > .row
+
+.form-group {
+    z-index: 1;
+}
+
+.col-md-3 {
+    z-index: 2;
+}

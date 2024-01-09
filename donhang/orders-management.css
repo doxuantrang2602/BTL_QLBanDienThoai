@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+main{
+    text-align: center;
+    width:90%;
+    margin: 0 auto;
+}
+h1{
+    color: #337ab7 !important;
+    font-weight: bold !important;
+    margin-bottom: 15px !important; 
+}
+div.buttons-section{
+    overflow: auto;
+    margin: 16px auto;
+}
+
+div.buttons-section button{
+    font-size: 16px;
+    float:right;
+}
+
+@media only screen and (max-width: 600px) {
+.input-group{
+      width: 100%;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .input-group{
+          width: 80%;
+        }
+    }
+    
+@media only screen and (min-width: 768px) {
+    .input-group{
+          width: 70%;
+        }
+    }
+@media only screen and (min-width: 992px) {
+        .input-group{
+              width: 60%;
+        }
+}
+@media only screen and (min-width: 1200px) {
+    .input-group{
+          width: 50%;
+    }
+}
+.input-group
+{
+    margin-bottom: 25px;
+}
+.input-group input{
+    padding: 20px;
+    font-size: 16px;
+}
+.input-group button{
+    padding: 12px 10px 5.5px;
+    font-size: 16px;
+}
+
+div.table-responsive{
+    clear: both;
+}
+table{
+    font-size: 16px;
+    margin: 0 auto;
+    background-color:#F5F5F5 !important;
+}
+
+table th,td{
+    border: 2px solid black !important;
+    padding: 15px 5px !important ;
+}
+thead{
+    background-color:	#B0C4DE;
+}
+th{
+    text-align: center !important;
+}
+tbody tr:hover{
+    background: #E0E0E0;
+}
+table img{
+    width: auto;
+    height: 20px;
+    margin: 0 2px;
+}
+
+div.last{
+    background-color:#F0F0F0;
+    overflow: auto;
+
+}
+
+div.last p{
+    float:left;
+    font-size: 18px;
+    margin: 12px;
+    color:#337ab7;
+}
+
+div.last span{
+    font-weight: bold;
+    color:#5cb85c;
+}
+#navi {
+    z-index: 0;
+}

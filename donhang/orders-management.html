@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Đơn Hàng</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='orders-management.css'>
+    <script src='orders-management.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/footer.css">
+</head> 
+<body>
+    <header>
+        <nav id="navvi">
+            <ul >
+                <li><a href="/trangchu.html"><i class="fa-solid fa-house-chimney"></i></a></li>
+                <li><a href="/sanpham/sanpham.html">Sản phẩm</a></li>
+                <li><a href="#">Đơn hàng</a></li>
+            <li><a href="#">Quản lý kho</a>
+                <!-- First Tier Drop Down -->
+                <ul>
+                    <li><a href="/kho/nhapkho.html">Nhập kho</a></li>
+                    <li><a href="/kho/tonkho.html">Tồn kho</a></li>
+                </ul>
+                </li>
+                <li><a href="/khachhang/khachhang.html">Khách hàng</a></li>
+            </ul>
+            <ul>
+              <li class="logout"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+              <li class="logout"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+              <li class="logout"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="main-header">
+                <h1>Danh sách đơn hàng</h1>
+                <hr>
+        </div>
+
+        <div class="main-content">
+            <div class="buttons-section">
+                <button class="btn btn-primary" onclick="addOrder();">
+                    <i class="glyphicon glyphicon-plus"></i> Tạo đơn hàng
+                </button>
+            </div>
+            <div class="input-group" >
+                    <input type="text" class="form-control" placeholder=" Nhập mã đơn hàng để tìm kiếm " name="search">
+                <div class="input-group-btn">
+                  <button class="btn btn-primary" type="submit">
+                    <i class="glyphicon glyphicon-search"></i> Tìm kiếm   
+                  </button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th> STT </th>
+                            <th> Mã đơn hàng </th>
+                            <th> Khách hàng </th>
+                            <th> Số điện thoại </th>
+                            <th> Địa chỉ nhận hàng </th>
+                            <th> Ngày đặt hàng </th>
+                            <th> Tổng tiền </th>
+                            <th> Trạng thái </th>
+                            <th> Ghi chú </th>
+                            <th> Quản lý </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 1 </td>
+                            <td> 221001ABC </td>
+                            <td> Nguyễn Văn A </td>
+                            <td> 0123456789 </td>
+                            <td> 122 Láng Thượng - Đống Đa - Hà Nội </td>
+                            <td> 01/10/2022 01:00 CH</td>
+                            <td> 41.980.000 đ </td>
+                            <td> Đang chuẩn bị hàng </td>
+                            <td> </td>
+                            <td>
+                                <img src="images/view-icon.jpg" alt="Xem chi tiết" title ="Xem chi tiết" onclick ="viewOrder();" >
+                                <img src="images/eidt-icon.jpg" alt="Sửa" title ="Sửa" onclick ="editOrder();" >
+                                <img src="images/delete-icon.jpg" alt="Xóa" title ="Xóa" onclick ="deleteOrder();" > 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 2 </td>
+                            <td> 221002DEF </td>
+                            <td> Trần Thị B </td>
+                            <td> 0111111111</td>
+                            <td> 275 Nguyễn Trãi - Thanh Xuân - Hà Nội </td>
+                            <td> 02/10/2022 02:00 CH</td>
+                            <td> 6.000.000 đ </td>
+                            <td> Khách đã nhận hàng</td>
+                            <td> </td>
+                            <td>
+                                <img src="images/view-icon.jpg" alt="Xem chi tiết" title ="Xem chi tiết" onclick ="viewOrder();" >
+                                <img src="images/eidt-icon.jpg" alt="Sửa" title ="Sửa" onclick ="editOrder();" >
+                                <img src="images/delete-icon.jpg" alt="Xóa" title ="Xóa" onclick ="deleteOrder();" > 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 3 </td>
+                            <td> 221003GHI </td>
+                            <td> Hoàng Văn C </td>
+                            <td> 0222222222 </td>
+                            <td> Số Nhà 7, Ngõ 1, Tô Hiệu - Hà Đông - Hà Nội </td>
+                            <td> 03/10/2022 01:00 SA</td>
+                            <td> 18.990.000 đ </td>
+                            <td> Đang giao hàng </td>
+                            <td></td>
+                            <td>
+                                <img src="images/view-icon.jpg" alt="Xem chi tiết" title ="Xem chi tiết" onclick ="viewOrder();" >
+                                <img src="images/eidt-icon.jpg" alt="Sửa" title ="Sửa" onclick ="editOrder();" >
+                                <img src="images/delete-icon.jpg" alt="Xóa" title ="Xóa" onclick ="deleteOrder();" > 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 4 </td>
+                            <td> 221004KLM </td>
+                            <td> Nguyễn Thị D </td>
+                            <td> 0333333333 </td>
+                            <td> 674 Láng Hạ - Đống Đa - Hà Nội </td>
+                            <td> 04/10/2022 08:00 SA</td>
+                            <td> 4.490.000 đ </td>
+                            <td> Đang chuẩn bị hàng </td>
+                            <td></td>
+                            <td>
+                                <img src="images/view-icon.jpg" alt="Xem chi tiết" title ="Xem chi tiết" onclick ="viewOrder();" >
+                                <img src="images/eidt-icon.jpg" alt="Sửa" title ="Sửa" onclick ="editOrder();" >
+                                <img src="images/delete-icon.jpg" alt="Xóa" title ="Xóa" onclick ="deleteOrder();" > 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 5 </td>
+                            <td> 221005XYZ </td>
+                            <td> Đặng Văn F </td>
+                            <td> 0444444444 </td>
+                            <td> 191 Phương Trạch - Đông Anh - Hà Nội </td>
+                            <td> 05/10/2022 09:00 CH</td>
+                            <td> 11.990.000 đ </td>
+                            <td> Chờ xác nhận </td>
+                            <td></td>
+                            <td>
+                                <img src="images/view-icon.jpg" alt="Xem chi tiết" title ="Xem chi tiết" onclick ="viewOrder();" >
+                                <img src="images/eidt-icon.jpg" alt="Sửa" title ="Sửa" onclick ="editOrder();" >
+                                <img src="images/delete-icon.jpg" alt="Xóa" title ="Xóa" onclick ="deleteOrder();" > 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 6 </td>
+                            <td> 221006RPQ </td>
+                            <td> Nguyễn Đức G </td>
+                            <td> 0555555555 </td>
+                            <td> 263 Quan Hoa - Cầu Giấy - Hà Nội </td>
+                            <td> 06/10/2022 11:00 SA</td>
+                            <td> 20.480.000 đ </td>
+                            <td>Chờ xác nhận </td>
+                            <td></td>
+                            <td>
+                                <img src="images/view-icon.jpg" alt="Xem chi tiết" title ="Xem chi tiết" onclick ="viewOrder();" >
+                                <img src="images/eidt-icon.jpg" alt="Sửa" title ="Sửa" onclick ="editOrder();" >
+                                <img src="images/delete-icon.jpg" alt="Xóa" title ="Xóa" onclick ="deleteOrder();" > 
+                            </td>
+                        </tr>
+                    </tbody>
+                        
+                </table>
+            </div>
+            <div class="last">
+               <p>Tổng số đơn hàng: <span>6</span></p>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+      
+          <h3>HTHHL Group</h3>
+      
+          <p class="footer-links">
+            <a href="/trangchu.html" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+          
+            <a href="#">Pricing</a>
+          
+            <a href="#">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+          </p>
+      
+          <p class="footer-company-name">Company Name © 2022</p>
+        </div>
+      
+        <div class="footer-center">
+      
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Số 3, Cầu Giấy, P. Láng Thượng</span> Đống Đa, Hà Nội</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>(+84) 886 298 306</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@HTHHLGruop.com</a></p>
+          </div>
+      
+        </div>
+      
+        <div class="footer-right">
+      
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Là một tập thể đoàn kết, luôn tích cực phát triển, hướng tới tương lai !
+          </p>
+      
+          <div class="footer-icons">
+      
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+      
+          </div>
+      
+        </div>
+      
+      </footer>
+</body>
+</html>

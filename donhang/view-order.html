@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Xem chi tiết</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='view-order.css'>
+    <script src='orders-management.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/footer.css">
+</head>
+<body>
+
+    <header>
+        <nav id="navvi">
+            <ul >
+                <li><a href="/trangchu.html"><i class="fa-solid fa-house-chimney"></i></a></li>
+                <li><a href="/sanpham/sanpham.html">Sản phẩm</a></li>
+                <li><a href="/donhang/orders-management.html">Đơn hàng</a></li>
+                <li><a href="#">Quản lý kho</a>
+                <ul>
+                    <li><a href="/kho/nhapkho.html">Nhập kho</a></li>
+                    <li><a href="/kho/tonkho.html">Tồn kho</a></li>
+                </ul>
+                </li>
+                <li><a href="/khachhang/khachhang.html">Khách hàng</a></li>
+            </ul>
+            <ul>
+              <li class="logout"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+              <li class="logout"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+              <li class="logout"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="main-header">
+            <h1> Chi tiết đơn hàng </h1>
+            <hr>
+        </div>
+        <div class="main-content">
+            <div class="information-section">
+                <h3>Thông tin đơn hàng</h3>
+                <div class="table-responsive">
+                    <table class="table" id="info-table">
+                        <tr>
+                            <td>Mã đơn hàng:</td>
+                            <td>221001ABC</td>
+                        </tr>
+                        <tr>
+                            <td>Khách hàng:</td>
+                            <td>Nguyễn Văn A</td>
+                        </tr>
+                        <tr>
+                            <td>Số điện thoại:</td>
+                            <td>0123456789</td>
+                        </tr>
+                        <tr>
+                            <td>Địa chỉ nhận hàng:</td>
+                            <td>122 Láng Thượng - Đống Đa - Hà Nội</td>
+                        </tr>
+                        <tr>
+                            <td>Ngày đặt hàng:</td>
+                            <td>01/10/2022 01:00 CH</td>
+                        </tr>
+                        <tr>
+                            <td>Trạng thái:</td>
+                            <td>Đang chuẩn bị hàng</td>
+                        </tr>
+                        <tr>
+                            <td>Ghi chú:</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    
+            <div class="products-section">
+                <h3>Danh sách sản phẩm</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="products-table">
+                        <thead>
+                            <tr>
+                                <th> STT </th>
+                                <th> Mã sản phẩm </th>
+                                <th> Tên sản phẩm </th>
+                                <th> Số lượng mua </th>
+                                <th> Giá bán </th>
+                                <th> Thành tiền </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> 1 </td>
+                                <td> N6008 </td>
+                                <td> Samsung Galaxy Z Flip 4 5G </td>
+                                <td> 1 </td>
+                                <td> 22.990.000 đ </td>
+                                <td> 22.990.000 đ </td>
+                            </tr>
+                            <tr>
+                                <td> 2 </td>
+                                <td> N6014 </td>
+                                <td> OPPO Reno 8 Pro 5G </td>
+                                <td> 1 </td>
+                                <td> 18.990.000 đ </td>
+                                <td> 18.990.000 đ </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3"><b>Tổng cộng</b></td>
+                                <td><b>2</b></td>
+                                <td> </td>
+                                <td><b> 41.980.000 đ </b></td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>        
+            </div>
+            <div class="buttons-section">
+                <button id="back-button" type="button" class="btn btn-default" onclick ="backToList();">Thoát</button>
+                <button id="edit-button" type="button" class="btn btn-primary" onclick ="editOrder();">Sửa</button>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    background-color: #ffffff;
+}
+main{
+    width:90%;
+    margin:0 auto;
+}
+h1{
+    color: #337ab7 !important;
+    text-align: center;
+    font-weight: bold !important;
+}
+h3{
+    color: #337ab7 !important;
+}
+
+.table{
+    background-color:#F5F5F5;
+    width:100%;
+    font-size: 16px;
+    margin:0 auto;
+}
+.information-section tr:first-child td{
+    padding-top: 20px ;
+}
+.information-section tr:last-child td{
+    padding-bottom: 20px ;
+}
+
+div.information-section td{
+    border:none !important;
+}
+
+.information-section td:first-child{
+    width:25%;
+    padding-left: 2%;
+    font-weight: bold;
+}
+
+textarea{
+    resize: vertical;
+}
+label.required::after{
+    content:" * ";
+    color:red;
+}
+.error{
+    display: none;
+    margin: 5px 0 0 6px;
+    color: red;
+}
+
+.form-control{
+    padding: 10px !important;
+    font-size: 16px !important;
+}
+input#datetime{
+    line-height: normal !important;
+}
+
+input.form-control, select.form-control{
+  height:auto !important; 
+}
+textarea{
+    resize: vertical;
+}
+
+@media only screen and (max-width: 767px) {
+    .form-control{
+          width: 100% !important;
+        }
+}     
+@media only screen and (min-width: 768px) {
+    .form-control{
+              width: 80% !important;
+            }
+}
+@media only screen and (min-width: 992px) {
+    .form-control{
+              width: 70% !important;
+            }
+}
+
+.products-section table th{
+    text-align: center;
+}
+.products-section table tr{
+    text-align: center;
+}
+.products-section table th{
+    background-color:#C8C8C8;
+}
+
+.products-section tr:hover{
+    background-color:#E8E8E8;
+}
+
+.products-form{
+    font-size: 16px;
+    margin: 15px 0 30px 5px ;
+}
+.products-form label{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+.products-form select{
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+@media only screen and (max-width: 600px) {
+    .products-form select{
+          width: 100% !important;
+        }
+}
+@media only screen and (min-width: 600px) {
+    .products-form select{
+              width: 50% !important;
+            }
+}
+        
+@media only screen and (min-width: 992px) {
+    .products-form select{
+              width: 30% !important;
+            }
+}
+
+div.buttons-section button{
+
+    font-size: 16px;
+    float: right;
+    margin: 10px 10px 0;
+}
+#back-button{
+    background-color: #DCDCDC;
+}
+#back-button:hover{
+    background-color: #B8B8B8;
+}
+.info-hidden{
+    display: none;
+}
+.delete-product{
+    border-radius: 3px;
+    border: none;
+    background-color: red;
+    padding: 3px 5px;
+    color:white;   
+} 
+.table-responsive p{
+    font-size: 16px;
+    float:right;
+    padding-right: 5px;
+}
+table#products-table input{
+    width:30%;
+}
+
+.footer-distributed {
+    margin-top: 50px;
+}

@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    width: 100%;
+    background: #fff;
+    margin: auto;
+
+}
+
+header {
+  color: white;
+  background: lavenderblush;
+  height: 70px;
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+h1{
+    line-height: 70px;
+    font-size: 50px;
+    text-align: center;
+    color: #594545;
+    margin: 20px;
+    
+}
+
+
+table img{
+    width : 100px;
+    height: 100px;
+    text-align: center;
+}
+.Images{
+    width:25%;
+    height:35%;
+    margin: auto;
+}
+div.form{
+    margin: auto;
+    width: 35%;
+    height: 5%;
+    border-radius: 3px;
+    box-sizing: border-box;
+    background: lavenderblush;
+   
+    border:2px solid #3f5cd2;
+}
+label {
+    margin: 1px 2x;
+  display:block;
+  text-align: left;
+}
+input[type=text] { 
+    margin-left: 20px;
+     border: 2px solid purple;  border-radius: 4px;
+     width: 50%;
+     padding: 0px;
+     resize: vertical;
+     
+    }
+
+div.form-group{
+    margin: 10px 10px;
+    
+    text-align: center;
+}
+.button{
+    
+    text-align: center;
+    margin-bottom: 10px;
+}
+div.error-message{
+    text-align: center;
+    color:crimson;
+}
+table{
+    font-size: 20px;
+}
+table th{
+    height: 40px;
+    background: #EDEDED;
+    text-align:center;
+}
+
+
+table, th, td{
+    border:2px solid #000;
+    
+}
+table td:nth-child(2),td:nth-child(4){
+    text-align: center;
+}
+.table{
+    border-collapse:collapse;
+    margin: auto;
+    margin-bottom: 100px;
+}
+tr:hover{
+    background-color: #FFEFEF;
+}
+
+.navbar {
+    background-color: rgb(30, 3, 184);
+    border-color: #080808;
+    width: 100%;
+}
+
+

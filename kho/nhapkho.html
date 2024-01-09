@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta charset="UTF-8">
+    <meta htt p-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập Kho</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="nhapkho.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/footer.css">
+</head>
+<body>
+    <nav id="navvi">
+        <ul >
+            <li><a href="/trangchu.html"><i class="fa-solid fa-house-chimney"></i></a></li>
+            <li><a href="/sanpham/sanpham.html">Sản phẩm</a></li>
+            <li><a href="/donhang/orders-management.html">Đơn hàng</a></li>
+            <li><a href="#">Kho hàng</a>
+            <ul>
+                <li><a href="/kho/nhapkho.html">Nhập kho</a></li>
+                <li><a href="/kho/tonkho.html">Tồn kho</a></li>
+            </ul>
+            </li>
+            <li><a href="/khachhang/khachhang.html">Khách hàng</a></li>
+        </ul>
+        <ul>
+          <li class="logout"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+          <li class="logout"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+          <li class="logout"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+    <header>
+       <h1>Danh sách phiếu nhập</h1>
+    </header>
+        <div class="form-group">
+            <form class="navbar-form">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li><input type="text" class="form-control" placeholder="Nhập mã phiếu để tìm kiếm" name="search"></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Tình trạng <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Hoàn thành</a></li>
+                                <li><a href="#">Đang xử lý</a></li>
+                                <li><a href="#">Chưa hoàn thành</a></li>
+                            </ul>
+                        </li>
+                        <li><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Search</button></li>
+                    </ul> 
+            </form>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th>Mã phiếu nhập</th>
+                    <th>Kho nhập</th>
+                    <th>Tình trạng</th>
+                    <th>Ngày nhập</th>
+                    <th>Người nhập</th>
+                    <th>Tổng tiền</th>
+                    <th><span class="glyphicon glyphicon-time"></span> Nợ</th>
+                </tr>
+                <tr>
+                    <td><a href="phieu1.html" target="_blank">PN000026</a></td>
+                    <td>Kho số 1</td>
+                    <td>Hoàn thành</td>
+                    <td>14:44 16/10/2022</td>
+                    <td>Trưởng phòng kinh doanh</td>
+                    <td>100.000.000</td>
+                    <td>30.000.000</td>
+                </tr>
+                <tr>
+                    <td><a href="#">PN000025</a></td>
+                    <td>Kho số 1</td>
+                    <td>Đang xử lý</td>
+                    <td>20:30 25/10/2022</td>
+                    <td>Trưởng phòng kinh doanh</td>
+                    <td>300.000.000</td>
+                    <td>49.000.000</td>
+                </tr>
+                <tr>
+                    <td><a href="#">PN000024</a></td>
+                    <td>Kho số 2</td>
+                    <td>Chưa hoàn thành</td>
+                    <td>15:11 22/10/2022</td>
+                    <td>Trưởng phòng kinh doanh</td>
+                    <td>500.000.000</td>
+                    <td>90.000.000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Tổng số phiếu nhập</th>
+                    <th>Tổng tiền</th>
+                    <th>Tổng nợ</th>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>900.000.000</td>
+                    <td>169.000.000</td>
+                </tr>
+            </table>
+        </div>
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+          
+              <h3>HTHHL Group</h3>
+          
+              <p class="footer-links">
+                <a href="/trangchu.html" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+              
+                <a href="#">Pricing</a>
+              
+                <a href="#">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="#">Contact</a>
+              </p>
+          
+              <p class="footer-company-name">Company Name © 2022</p>
+            </div>
+          
+            <div class="footer-center">
+          
+              <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Số 3, Cầu Giấy, P. Láng Thượng</span> Đống Đa, Hà Nội</p>
+              </div>
+          
+              <div>
+                <i class="fa fa-phone"></i>
+                <p>(+84) 886 298 306</p>
+              </div>
+          
+              <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@HTHHLGruop.com</a></p>
+              </div>
+          
+            </div>
+          
+            <div class="footer-right">
+          
+              <p class="footer-company-about">
+                <span>About the company</span>
+                Là một tập thể đoàn kết, luôn tích cực phát triển, hướng tới tương lai !
+              </p>
+          
+              <div class="footer-icons">
+          
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+          
+              </div>
+          
+            </div>
+          
+          </footer>
+    </body>
+</html>

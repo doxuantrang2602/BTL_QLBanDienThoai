@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="sanpham.css">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/footer.css">
+    <title>Sản Phẩm</title>
+</head>
+<body >
+    <nav id="navvi">
+        <ul >
+            <li><a href="/trangchu.html"><i class="fa-solid fa-house-chimney"></i></a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="/donhang/orders-management.html">Đơn hàng</a></li>
+            <li><a href="/kho/nhapkho.html">Kho hàng</a>
+            <!-- First Tier Drop Down -->
+            <ul>
+                <li><a href="/kho/nhapkho.html">Nhập kho</a></li>
+                <li><a href="/kho/tonkho.html">Tồn kho</a></li>
+            </ul>
+            </li>
+            <li><a href="/khachhang/khachhang.html">Khách hàng</a></li>
+        </ul>
+        <ul>
+          <li class="logout"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+          <li class="logout"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+          <li class="logout"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Quản Lý Sản Phẩm</h1> 
+    </header>
+    <main>
+        <div class="form">
+            <div class="form-group">
+                <label for="ma">Mã sản phẩm:   </label>
+                <input type="text" id="ma" class="form-input">
+                <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="ten">Tên sản phẩm:  </label>
+                <input type="text" id="ten" class="form-input">
+                <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="images">Hình ảnh:  </label>
+                <input type="text" id="images" class="form-input">
+                <div class="error-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="gia">Giá :  </label>
+                <input type="text" id="gia" class="form-input">
+                <div class="error-message"></div>
+            </div>
+            <div class="button"><button onclick="addNew()" class="btn btn-primary">Thêm Sản Phẩm</button></div>
+        </div>
+       
+            
+        
+       <br><br>
+       <script >
+
+
+        
+        function validateInput(){
+            let formElement = document.querySelector (".form");
+            let inputElement = formElement.querySelectorAll(".form-input");
+            for(let i=0 ; i< inputElement.length ; i++ )
+            {
+                if(inputElement[i].value ==="") {
+                    inputElement[i].parentElement.querySelector(".error-message").innerText=`Nhập lại ${inputElement[i].id}`
+                }
+                    else {
+                        inputElement[i].parentElement.querySelector(".error-message").innerText=""
+                     }
+            }
+        }
+      
+       var stt=17;
+        function addNew(){
+            validateInput()
+            
+                let  maSanPham=document.getElementById("ma").value
+                let tenSanPham =document.getElementById("ten").value
+                let imgSanPham = document.getElementById("images").value
+                let giaSanPham=document.getElementById("gia").value
+               
+                
+                let listS=
+               {
+                    Ma : maSanPham,
+                    Ten: tenSanPham,
+                    Images : imgSanPham,
+                    Gia: giaSanPham
+               }
+
+                tdHtml = `
+                <td>${stt}</td>
+                <td>${maSanPham}</td>
+                <td>${tenSanPham}</td>
+                <td><img src="${imgSanPham}" alt=""></td>
+                <td>${giaSanPham}</td>
+                <td><button >Sửa</button> <button onclick="xoa()">Xóa</button></td>
+                `;
+                 stt++;
+                //console.log(data);
+                var renderElm = document.getElementById("render");
+                var trElm = document.createElement("tr");
+                trElm.innerHTML = tdHtml;
+                
+                renderElm.appendChild(trElm);
+                
+            
+        }
+        
+        
+        
+        function xoa(){
+            confirm("Bạn có muốn xóa không?")
+        }
+       </script>
+       <div class="table-responsive">
+        <table border="1" cellspacing="0" id="render" class="table" >
+            <tr>
+                <th class="stt">STT</th>
+                <th class="masp">Mã sản phẩm</th>
+                <th class="tensp">Tên sản phẩm</th>
+                <th class="Images">Hình ảnh</th>
+                <th class="giasp">Giá</th>
+                <th >Quản lý</th>
+              
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>N6001</td>
+                <td>Iphone 14 Pro Max 1TB</td>
+                <td><img src="Images/ip14 1tb.jpeg" alt=""></td>
+                <td>49.490.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>N6002</td>
+                <td>Iphone 14 Pro 1TB</td>
+                <td><img src="Images/2.jpg" alt=""></td>
+                <td>44.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>N6003</td>
+                <td>Iphone 13 Pro Max 256GB</td>
+                <td><img src="Images/3.png" alt=""></td>
+                <td>30.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>N6004</td>
+                <td>Iphone 12 256GB</td>
+                <td><img src="Images/4.png" alt=""></td>
+                <td>19.890.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>N6005</td>
+                <td>Iphone 11 64GB</td>
+                <td><img src="Images/5.jpg" alt=""></td>
+                <td>11.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>N6006</td>
+                <td>Iphone 8</td>
+                <td><img src="Images/6.jpg" alt=""></td>
+                <td>6.000.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>N6007</td>
+                <td>Samsung Galaxy S22 Ultra 5G 128GB</td>
+                <td><img src="Images/7.jpg" alt=""></td>
+                <td>25.990.000₫ </td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>N6008</td>
+                <td>Samsung Galaxy Z Flip4 5G</td>
+                <td><img src="Images/8.jpg" alt=""></td>
+                <td>22.990.000₫ </td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>9  </td>
+                <td>N6009</td>
+                <td>Samsung Galaxy A23 4GB</td>
+                <td><img src="Images/9.jpg" alt=""></td>
+                <td>5.690.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>N6010</td>
+                <td>Samsung Galaxy Z Fold3 5G 256GB</td>
+                <td><img src="Images/10.jpg" alt=""></td>
+                <td>31.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>N6011</td>
+                <td>Xiaomi Redmi Note 11S 5G</td>
+                <td><img src="Images/11.jpg" alt=""></td>
+                <td>6.490.000₫</td>
+                <td class="button" ><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+               <td>12</td>
+                <td>N6012</td>
+                <td>Xiaomi Redmi Note 11</td>
+                <td><img src="Images/12.jpg" alt=""></td>
+                <td>4.690.000₫ </td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+               <td>13</td>
+                <td>N6013</td>
+                <td>Xiaomi 11T Pro 5G 8GB</td>
+                <td><img src="Images/13.jpeg" alt=""></td>
+                <td>13.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>N6014</td>
+                <td>OPPO Reno8 Pro 5G</td>
+                <td><img src="Images/14.jpg" alt=""></td>
+                <td>18.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>N6015</td>
+                <td>OPPO A55</td>
+                <td><img src="Images/15.jpg" alt=""></td>
+                <td>4.490.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>N6016</td>
+                <td>Vivo X80</td>
+                <td><img src="Images/16.jpg" alt=""></td>
+                <td>18.990.000₫</td>
+                <td class="button"><button onclick="">Sửa</button> <button onclick="xoa()">Xóa</button></td>
+            </tr>
+        </table>
+       </div>
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+      
+          <h3>HTHHL Group</h3>
+      
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+          
+            <a href="#">Pricing</a>
+          
+            <a href="#">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+          </p>
+      
+          <p class="footer-company-name">HTHHL Name © 2022</p>
+        </div>
+      
+        <div class="footer-center">
+      
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Số 3, Cầu Giấy, P. Láng Thượng</span> Đống Đa, Hà Nội</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>(+84) 886 298 306</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@HTHHLGruop.com</a></p>
+          </div>
+      
+        </div>
+      
+        <div class="footer-right">
+      
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Là một tập thể đoàn kết, luôn tích cực phát triển, hướng tới tương lai !
+          </p>
+      
+          <div class="footer-icons">
+      
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+      
+          </div>
+      
+        </div>
+      
+      </footer>
+</body>
+</html> 

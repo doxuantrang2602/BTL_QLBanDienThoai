@@ -1,0 +1,58 @@
+#navvi {
+  background-color: #282A35;
+  justify-content: space-around;
+  display: flex;
+  text-align: center;
+  margin: 0;
+}
+
+#navvi ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  }
+  
+#navvi ul li {
+  display:inline-block;
+  background-color: #282A35;
+  }
+
+#navvi a {
+  display:block;
+  padding:0 10px; 
+  color:#F1F1F1;
+  font-size:20px;
+  line-height: 60px;
+  text-decoration:none;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#navvi a:hover { 
+  background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+#navvi ul ul {
+  display: none;
+  position: absolute; 
+  top: 60px; /* the height of the main #navvi */
+}
+  
+/* Display Dropdowns on Hover */
+#navvi ul li:hover > ul {
+  display:inherit;
+}
+  
+/* Fisrt Tier Dropdown */
+#navvi ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+
+}
+
+.logout {
+    padding-left: 30px;
+}

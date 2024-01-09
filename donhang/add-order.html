@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Thêm đơn hàng</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='add-order.css'>
+    <script src='orders-management.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/nav.css">
+    <link rel="stylesheet" href="/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/footer.css">
+</head>
+<body>
+    <header>
+        <nav id="navvi">
+            <ul >
+                <li><a href="/trangchu.html"><i class="fa-solid fa-house-chimney"></i></a></li>
+                <li><a href="/sanpham/sanpham.html">Sản phẩm</a></li>
+                <li><a href="/donhang/orders-management.html">Đơn hàng</a></li>
+                <li><a href="/kho/phieu1.html">Kho hàng</a>
+                <!-- First Tier Drop Down -->
+                <ul>
+                    <li><a href="/kho/nhapkho.html">Nhập kho</a></li>
+                    <li><a href="/kho/tonkho.html">Tồn kho</a></li>
+                </ul>
+                </li>
+                <li><a href="/khachhang/khachhang.html">Khách hàng</a></li>
+            </ul>
+            <ul>
+              <li class="logout"><a href="#"><i class="fa-solid fa-bell"></i></a></li>
+              <li class="logout"><a href="#"><i class="fa-solid fa-circle-question"></i></a></li>
+              <li class="logout"><a href="#"><i class="fa-solid fa-user"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-header">
+            <h1> Thêm mới đơn hàng </h1>
+            <hr>
+        </div>
+        <div class="main-content">
+            <div class="information-section">
+                <h3>Thông tin đơn hàng</h3>
+                <form action="">
+                    <table class="table">
+                        <tr>
+                            <td><label for="order-id" class="required">Mã đơn hàng:</label></td>
+                            <td>
+                                <input type="text" id="order-id" class="form-control" name="order-id" placeholder="Nhập mã đơn hàng" onfocus="changeValue('order-id');">
+                                <p id="order-id-error" class="error"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="customer-selection" class="required" >Khách hàng:</label></td>
+                            <td>
+                                <select id="customer-selection" class="form-control" name="customer" onchange="changeValue('customer-selection');">
+                                    <option value="" disabled selected>--Chọn một khách hàng--</option>
+                                    <option value="KH01">Nguyễn Văn A</option>
+                                    <option value="KH02">Trần Thị B</option>
+                                    <option value="KH03">Hoàng Văn C</option>
+                                    <option value="KH04">Nguyễn Thị D</option>
+                                    <option value="KH05">Đặng Văn F</option>
+                                    <option value="KH06">Nguyễn Đức G</option>
+                                </select>
+                                <p id="customer-selection-error" class="error"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="tel" class="required">Số điện thoại:</label></td>
+                            <td>
+                                <input type="text" id="tel" class="form-control" name="telephone" placeholder="Nhập số điện thoại" onfocus="changeValue('tel');">
+                                <p id="tel-error" class="error"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="address" class="required">Địa chỉ nhận hàng:</label></td>
+                            <td>
+                                <input type="text" id="address" class="form-control" name="address" placeholder="Nhập địa chỉ nhận hàng" onfocus="changeValue('address');">
+                                <p id="address-error" class="error"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="datetime" class="required" >Ngày đặt hàng:</label></td>
+                            <td>
+                                <input type="datetime-local" id="datetime" class="form-control" name="date-time" placeholder="Chọn ngày giờ" onfocus="changeValue('datetime');">
+                                <p id="datetime-error" class="error"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="status-selection" class="required">Trạng thái:</label></td>
+                            <td>
+                                <select id="status-selection" class="form-control" name="status">
+                                    <option value="1">Chờ xác nhận</option>
+                                    <option value="2">Đang chuẩn bị hàng</option>
+                                    <option value="3">Đã gửi ship - Đang giao hàng</option>
+                                    <option value="4">Khách đã nhận hàng</option>
+                                    <option value="5">Hoàn hàng</option>
+                                </select>
+                                <p id="status-error" class="error"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="note">Ghi chú:</label></td>
+                            <td>
+                                <textarea id="note"  class="form-control" name="note" placeholder="Ghi chú (nếu có)" maxlength="1024"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            
+            <div class="products-section">
+                <h3>Danh sách sản phẩm</h3>
+                <form action="" class="products-form">
+                    <label for="products-selection" class="required">Chọn sản phẩm: </label>
+                    <input type="text" style="display:none;" value="" id="selected-products">
+                    <select id="products-selection" class="form-control" onchange="chooseProducts();">
+                        <option value="" disabled selected>--Chọn sản phẩm--</option>
+                        <option value="N6001-3-49490000">iPhone 14 ProMax 1TB</option>
+                        <option value="N6006-10-6000000">iPhone 8</option>
+                        <option value="N6014-5-18990000">OPPO Reno 8 Pro 5G</option>
+                        <option value="N6008-1-22990000">Samsung Galaxy Z Flip 4 5G</option>
+                        <option value="N6012-1-4690000">Xiaomi Redmi Note 11</option>
+                    </select>
+                    <p id="products-selection-error" class="error"></p>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="products-table">
+                        <tr>
+                            <th> Mã sản phẩm </th>
+                            <th> Tên sản phẩm </th>
+                            <th> Số lượng tồn kho</th>
+                            <th> Số lượng mua</th>
+                            <th> Giá bán </th>
+                            <th> Thành tiền </th>
+                            <th> </th>
+                        </tr>
+                    </table>
+                    <p><label>Tổng tiền:   </label><span id="sum">0</span></p>
+                    <input type="number" style="display:none;" value="0" id="numberofproducts">
+                </div>
+            </div>
+            
+            <div class="buttons-section">
+                <button id="back-button" type="button" class="btn btn-default" onclick ="backToList();">Thoát</button>
+                <button id="add-button" type="button" class="btn btn-primary" onclick ="addNewOrder();">Thêm mới</button>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+      
+          <h3 id="group">HTHHL Group</h3>
+      
+          <p class="footer-links">
+            <a href="/trangchu.html" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+          
+            <a href="#">Pricing</a>
+          
+            <a href="#">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+          </p>
+      
+          <p class="footer-company-name">Company Name © 2022</p>
+        </div>
+      
+        <div class="footer-center">
+      
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Số 3, Cầu Giấy, P. Láng Thượng</span> Đống Đa, Hà Nội</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>(+84) 886 298 306</p>
+          </div>
+      
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@HTHHLGruop.com</a></p>
+          </div>
+      
+        </div>
+      
+        <div class="footer-right">
+      
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Là một tập thể đoàn kết, luôn tích cực phát triển, hướng tới tương lai !
+          </p>
+      
+          <div class="footer-icons">
+      
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+      
+          </div>
+      
+        </div>
+      
+      </footer>
+</body>
+</html>
